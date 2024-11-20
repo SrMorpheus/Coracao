@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boa noite, Meu amor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #ffe4e1; /* Fundo rosa claro */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .heart {
+            width: 300px; /* Tamanho do coração */
+            height: 300px;
+            position: relative;
+            transform: rotate(-45deg); /* Rotaciona para formar o coração */
+            animation: heartbeat 1s infinite; /* Animação de pulsação */
+            overflow: hidden;
+            border: 10px solid #ff1493; /* Cor do contorno do coração */
+            border-radius: 50%;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: transparent; /* Sem fundo colorido */
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -150px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 150px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg); /* Faz o coração aumentar de tamanho */
+            }
+        }
+
+        .heart img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem cobrir todo o coração */
+            transform: rotate(45deg); /* Alinha a imagem corretamente no coração */
+            border-radius: 50%; /* Forma de coração */
+        }
+
+        .text {
+            margin-top: 30px;
+            color: #ff1493;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .text span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #d10068;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">
+            <!-- Substitua 'minha-foto.jpeg' pelo caminho da sua imagem -->
+            <img src="minha-foto.jpeg" alt="Foto">
+        </div>
+        <div class="text">
+            VOCÊ É MINHA PRINCESA
+            <span>EU TE AMO, MINHA PRINCESA</span>
+        </div>
+    </div>
+</body>
+</html>
